@@ -1,0 +1,9 @@
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  list-style-type: none;
+  margin-top: 35px;
+  background-color: #c2d1d4;
+  border-top: 1px solid #c2d1d4;
+}

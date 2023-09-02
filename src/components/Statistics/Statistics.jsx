@@ -1,8 +1,7 @@
 import { PropTypes } from 'prop-types';
 import css from './Statistics.module.css';
 import { StatList } from 'components/StatList/StatList';
-import data from '../../data/data.json';
-export const Statistics = ({ title }) => {
+export const Statistics = ({ title, data }) => {
   return (
     <section className={css.statistics}>
       {title && <h2 className={css.title}>{title}</h2>}
@@ -13,4 +12,5 @@ export const Statistics = ({ title }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
+  data: PropTypes.array.isRequired,
 };

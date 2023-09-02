@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { PropTypes } from 'prop-types';
 import css from './Description.module.css';
 export const Description = ({ info }) => {
   const { username, tag, location, avatar } = info;

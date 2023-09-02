@@ -1,6 +1,6 @@
-import data from '../../data/transactions.json';
+import { PropTypes } from 'prop-types';
 import { TransactionRow } from 'components/TransactionRow/TransactionRow';
-export const TransactionBody = () => {
+export const TransactionBody = ({ data }) => {
   return (
     <tbody>
       {data.map(({ id, type, amount, currency }) => {
@@ -15,4 +15,7 @@ export const TransactionBody = () => {
       })}
     </tbody>
   );
+};
+TransactionBody.propTypes = {
+  data: PropTypes.array.isRequired,
 };

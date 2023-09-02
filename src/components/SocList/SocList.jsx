@@ -1,7 +1,7 @@
+import { PropTypes } from 'prop-types';
 import { SocItem } from '../SocItem/SocItem';
-import data from '../../data/user.json';
 import css from './SocList.module.css';
-export const SocList = () => {
+export const SocList = ({ data }) => {
   const { followers, views, likes } = data.stats;
   return (
     <ul className={css.stats}>
@@ -10,4 +10,7 @@ export const SocList = () => {
       <SocItem stats={likes} text="Likes" />
     </ul>
   );
+};
+SocList.propTypes = {
+  data: PropTypes.object.isRequired,
 };

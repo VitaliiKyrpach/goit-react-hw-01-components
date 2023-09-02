@@ -1,12 +1,15 @@
+import { PropTypes } from 'prop-types';
 import { Description } from '../Description/Description';
 import { SocList } from 'components/SocList/SocList';
-import data from '../../data/user.json';
 import css from './Profile.module.css';
-export const Profile = () => {
+export const Profile = ({ data }) => {
   return (
     <div className={css.profile}>
       <Description info={data} />
-      <SocList />
+      <SocList data={data} />
     </div>
   );
+};
+Profile.propTypes = {
+  data: PropTypes.object.isRequired,
 };

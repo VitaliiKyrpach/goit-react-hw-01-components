@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { PropTypes } from 'prop-types';
 import css from './SocItem.module.css';
 export const SocItem = ({ stats, text }) => {
   return (
